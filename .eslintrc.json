@@ -1,3 +1,7 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "func-style": ["warn", "expression", { "allowArrowFunctions": true }],
+    "prefer-arrow-callback": "warn"
+  }
 }
