@@ -31,7 +31,9 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={`${robotoMono.variable} ${rubik.variable}`}>
         <Navbar />
-        <main>{children}</main>
+        <main className='px-6 md:px-[3.125rem] lg:px-[6.25rem] xl:px-[9.375rem]'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

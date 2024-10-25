@@ -16,6 +16,7 @@ const config: Config = {
       },
       fontFamily: {
         rubik: ['var(--font-rubik)'],
+        mono: ['var(--font-roboto-mono)'],
       },
       listStyleType: {
         none: 'none',
@@ -71,6 +72,9 @@ const config: Config = {
           '4': 'var(--chart-4)',
           '5': 'var(--chart-5)',
         },
+      },
+      boxShadow: {
+        'button-hover': '4px 4px 0 0 var(--primary)',
       },
     },
   },
