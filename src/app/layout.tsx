@@ -28,10 +28,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body className={`${robotoMono.variable} ${rubik.variable}`}>
+    <html lang='en'>
+      <body
+        suppressHydrationWarning
+        className={`${robotoMono.variable} ${rubik.variable}`}>
         <Navbar />
-        <main className='px-6 md:px-[3.125rem] lg:px-[6.25rem] xl:px-[9.375rem]'>
+        <main className='px-6 max-xl:px-[9.375rem] max-lg:px-[6.25rem] max-md:px-[3.125rem] max-sm:px-6'>
           {children}
         </main>
         <Footer />

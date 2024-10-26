@@ -18,6 +18,13 @@ const config: Config = {
         rubik: ['var(--font-rubik)'],
         mono: ['var(--font-roboto-mono)'],
       },
+      fontSize: {
+        'numbered-heading': 'clamp(1.625rem, 5vw, 2rem)',
+        h2: 'clamp(1.625rem, 5vw, 2rem)',
+        'project-title': 'clamp(1.5rem, 5vw, 1.75rem)',
+        title: 'clamp(2.5rem, 5vw, 3.75rem)',
+        'big-heading': 'clamp(2.5rem, 8vw, 5rem)',
+      },
       listStyleType: {
         none: 'none',
         disc: 'disc',

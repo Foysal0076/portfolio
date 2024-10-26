@@ -5,7 +5,7 @@ const HomeHero = () => {
   return (
     <Section
       id='hero'
-      className='mx-auto flex h-screen flex-col items-start justify-center'>
+      className='flex h-screen flex-col items-start justify-center'>
       <h1 className='mb-4 ml-1 font-mono font-normal text-primary sm:mb-7'>
         Hi, my name is
       </h1>
