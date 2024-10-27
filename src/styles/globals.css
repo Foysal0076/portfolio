@@ -138,7 +138,7 @@
 }
 
 .numbered-heading {
-  @apply relative mx-0 my-2.5 flex w-full items-center whitespace-nowrap text-numbered-heading;
+  @apply relative mx-0 mb-10 mt-2.5 flex w-full items-center whitespace-nowrap text-numbered-heading;
 
   &:before {
     counter-increment: section;

@@ -1,4 +1,5 @@
 import AboutMeSection from '@/components/about-me-section'
+import ExperienceSection from '@/components/experience-section'
 import HomeHero from '@/components/home-hero'
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <HomeHero />
       <AboutMeSection />
+      <ExperienceSection />
     </div>
   )
 }
