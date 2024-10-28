@@ -1,6 +1,7 @@
-import AboutMeSection from '@/components/about-me-section'
-import ExperienceSection from '@/components/experience-section'
-import HomeHero from '@/components/home-hero'
+import AboutMeSection from '@/components/home/about-me-section'
+import ExperienceSection from '@/components/home/experience-section'
+import HomeHero from '@/components/home/home-hero'
+import ProjectsSection from '@/components/home/projects-section'
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <HomeHero />
       <AboutMeSection />
       <ExperienceSection />
+      <ProjectsSection />
     </div>
   )
 }

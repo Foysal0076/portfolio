@@ -1,7 +1,7 @@
 'use client'
 import Section from '@/components/containers/section'
 import { useState, useRef, useEffect, useMemo } from 'react'
-import { experienceData } from '@/data/experience'
+import { experienceData } from '@/data/experience.data'
 import { cn } from '@/utils'
 
 const ExperienceSection = () => {
@@ -28,7 +28,7 @@ const ExperienceSection = () => {
   }, [activeTabIndex])
 
   return (
-    <Section id='about' className='max-w-[43.75rem] py-28'>
+    <Section id='about' className='max-w-[43.75rem] py-16 md:py-28'>
       <h2 className='numbered-heading'>Where I&rsquo;ve Worked</h2>
 
       <div className='md:flex'>
@@ -38,9 +38,9 @@ const ExperienceSection = () => {
             className='scrollbar-hide flex overflow-x-auto border-b border-border md:flex-col md:overflow-x-visible md:border-b-0 md:border-l'>
             {experienceData.map((item, index) => (
               <button
-                key={item.id}
+                key={index}
                 className={cn(
-                  'h-11 whitespace-nowrap px-5 font-mono text-sm transition-colors duration-300 hover:bg-card md:text-left',
+                  'h-11 whitespace-nowrap px-5 font-mono text-sm transition-colors duration-300 md:text-left md:hover:bg-card',
                   {
                     'text-primary': activeTabIndex === index,
                     'text-muted-foreground': activeTabIndex !== index,

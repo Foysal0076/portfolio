@@ -1,6 +1,7 @@
-export const experienceData = [
+import { Experience } from '@/types'
+
+export const experienceData: Experience[] = [
   {
-    id: 1,
     company: 'Staff Asia',
     position: 'Software Engineer',
     duration: 'June 2021 - Present',
@@ -13,7 +14,6 @@ export const experienceData = [
     ],
   },
   {
-    id: 2,
     company: 'Freelance',
     position: 'React Developer',
     duration: '2021 - 2022',
