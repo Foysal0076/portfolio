@@ -4,6 +4,8 @@ import '@/styles/globals.css'
 import { Rubik, Roboto_Mono } from 'next/font/google'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navigation/nvabar'
+import SideLinksElement from '@/components/side-link-element'
+import SideEmailElement from '@/components/side-email.element'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -33,6 +35,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${robotoMono.variable} ${rubik.variable}`}>
         <Navbar />
+        <SideLinksElement />
+        <SideEmailElement />
         <main className='px-6 max-xl:px-[9.375rem] max-lg:px-[6.25rem] max-md:px-[3.125rem] max-sm:px-6'>
           {children}
         </main>

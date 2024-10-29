@@ -16,21 +16,21 @@ const SocialLinks = ({ className }: Props) => {
         href={myInformation.github}
         target='_blank'
         rel='noopener noreferrer'
-        className='p-2.5'>
+        className='p-2.5 transition-[var(--transition)] duration-300 hover:-translate-y-1 hover:text-primary'>
         <GithubIcon className='h-5 w-5' strokeWidth='18' />
       </a>
       <a
         href={myInformation.linkedin}
         target='_blank'
         rel='noopener noreferrer'
-        className='p-2.5'>
+        className='p-2.5 transition-[var(--transition)] duration-300 hover:-translate-y-1 hover:text-primary'>
         <LinkedinIcon className='h-5 w-5' />
       </a>
       <a
         href={myInformation.twitter}
         target='_blank'
         rel='noopener noreferrer'
-        className='p-2.5'>
+        className='p-2.5 transition-[var(--transition)] duration-300 hover:-translate-y-1 hover:text-primary'>
         <XIcon className='h-5 w-5' />
       </a>
     </div>
