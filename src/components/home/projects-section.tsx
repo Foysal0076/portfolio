@@ -1,20 +1,28 @@
-import FeaturedProjectCard from '@/components/cards/featured-project-card'
+import ProjectCard from '@/components/cards/project-card'
 import Section from '@/components/containers/section'
-import { featuredProjectsData } from '@/data/projects.data'
+import { projectsData } from '@/data/projects.data'
+import Link from 'next/link'
 
-const ProjectsSection = () => {
+const ProjectSection = () => {
   return (
-    <Section id='featured-projects' className='py-16 md:py-28'>
-      <h2 className='numbered-heading mb-10 text-nowrap text-numbered-heading text-muted-foreground'>
-        Some Things I&lsquo;ve built
-      </h2>
-      <ul className='relative z-10 flex flex-col gap-10 md:gap-14 xl:gap-24'>
-        {featuredProjectsData.map((project, i) => (
-          <FeaturedProjectCard key={project.title} project={project} />
+    <Section id='projects' className='py-16 md:py-28'>
+      <div className='mb-12 flex flex-col justify-center'>
+        <h2 className='mb-2.5 text-center text-h2 text-muted-foreground'>
+          Other Noteworthy Projects
+        </h2>
+        <Link
+          href='/projects'
+          className='archive-link relative mx-auto inline-block text-center font-mono text-sm text-primary'>
+          View the archive
+        </Link>
+      </div>
+      <div className='projects-grid'>
+        {projectsData.map((project) => (
+          <ProjectCard key={project.title} project={project} />
         ))}
-      </ul>
+      </div>
     </Section>
   )
 }
 
-export default ProjectsSection
+export default ProjectSection

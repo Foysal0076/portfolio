@@ -82,6 +82,8 @@ const config: Config = {
       },
       boxShadow: {
         'button-hover': '4px 4px 0 0 var(--primary)',
+        default: '0 10px 30px -15px var(--navy-shadow)',
+        'card-hover': '0 20px 30px -15px var(--navy-shadow)',
       },
     },
   },

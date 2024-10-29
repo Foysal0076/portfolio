@@ -98,9 +98,6 @@
   h3 {
     @apply font-semibold text-muted-foreground;
   }
-  p {
-    @apply text-[17px];
-  }
 }
 
 @layer components {
@@ -337,5 +334,28 @@
         filter: grayscale(100%) contrast(1) brightness(50%);
       }
     }
+  }
+}
+
+.archive-link {
+  &:after {
+    content: '';
+    transition: var(--transition);
+    @apply block h-[1px] w-0 bg-primary;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  &:hover {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   }
 }
