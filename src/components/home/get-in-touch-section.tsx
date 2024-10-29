@@ -4,7 +4,7 @@ import { myInformation } from '@/data/personal.data'
 
 const GetInTouchSection = () => {
   return (
-    <Section className='max-w-[37.5rem] py-16 text-center md:py-24'>
+    <Section className='mb-10 max-w-[37.5rem] py-16 text-center md:mb-24 md:py-24'>
       <h2 className='mb-5 font-mono text-base text-primary'>
         What&lsquo;s Next?
       </h2>

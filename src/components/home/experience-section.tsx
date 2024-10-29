@@ -27,6 +27,40 @@ const ExperienceSection = () => {
     }
   }, [activeTabIndex])
 
+  const [tabStyle, setTabStyle] = useState<React.CSSProperties>({})
+
+  useEffect(() => {
+    const handleResize = () => {
+      setTabStyle({
+        [window.innerWidth >= 768 ? 'height' : 'width']: `${100 / dataLength}%`,
+        transform:
+          window.innerWidth >= 768
+            ? `translateY(${activeTabIndex * 100}%)`
+            : `translateX(${activeTabIndex * 100}%)`,
+      })
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          handleResize()
+        }
+      })
+    })
+
+    if (tabsRef.current) {
+      observer.observe(tabsRef.current)
+    }
+
+    handleResize() // Initial call to set the style
+
+    return () => {
+      if (tabsRef.current) {
+        observer.unobserve(tabsRef.current)
+      }
+    }
+  }, [dataLength, activeTabIndex, window.innerWidth])
+
   return (
     <Section id='about' className='max-w-[43.75rem] py-16 md:py-28'>
       <h2 className='numbered-heading'>Where I&rsquo;ve Worked</h2>
@@ -53,14 +87,7 @@ const ExperienceSection = () => {
           </div>
           <div
             className='absolute -left-[1px] bottom-0 h-0.5 rounded bg-primary transition-all duration-300 md:top-0 md:h-auto md:w-0.5'
-            style={{
-              [window.innerWidth >= 768 ? 'height' : 'width']:
-                `${100 / dataLength}%`,
-              transform:
-                window.innerWidth >= 768
-                  ? `translateY(${activeTabIndex * 100}%)`
-                  : `translateX(${activeTabIndex * 100}%)`,
-            }}
+            style={tabStyle}
           />
         </div>
 
