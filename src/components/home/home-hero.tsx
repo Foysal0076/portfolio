@@ -21,7 +21,12 @@ const HomeHero = () => {
         human-centered products at{' '}
         <span className='text-primary'>Staff Asia</span> .
       </p>
-      <Button className='mt-8 sm:mt-12'>Check out my resume!</Button>
+      <a
+        href='/documents/Resume_Foysal_Ahmed.pdf'
+        download
+        className='mt-8 sm:mt-12'>
+        <Button>Check out my resume!</Button>
+      </a>
     </Section>
   )
 }

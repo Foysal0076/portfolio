@@ -62,7 +62,7 @@ const ExperienceSection = () => {
   }, [dataLength, activeTabIndex, window.innerWidth])
 
   return (
-    <Section id='about' className='max-w-[43.75rem] py-16 md:py-28'>
+    <Section id='experience' className='max-w-[43.75rem] py-16 md:py-28'>
       <h2 className='numbered-heading'>Where I&rsquo;ve Worked</h2>
 
       <div className='md:flex'>

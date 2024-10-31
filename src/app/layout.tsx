@@ -3,9 +3,9 @@ import '@/styles/globals.css'
 
 import { Rubik, Roboto_Mono } from 'next/font/google'
 import Footer from '@/components/footer'
-import Navbar from '@/components/navigation/nvabar'
 import SideLinksElement from '@/components/side-link-element'
 import SideEmailElement from '@/components/side-email.element'
+import { Navbar } from '@/components/navigation/navbar'
 
 const rubik = Rubik({
   subsets: ['latin'],
