@@ -59,7 +59,7 @@ const ExperienceSection = () => {
         observer.unobserve(tabsRef.current)
       }
     }
-  }, [dataLength, activeTabIndex, window.innerWidth])
+  }, [dataLength, activeTabIndex])
 
   return (
     <Section id='experience' className='max-w-[43.75rem] py-16 md:py-28'>

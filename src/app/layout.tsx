@@ -6,6 +6,8 @@ import Footer from '@/components/footer'
 import SideLinksElement from '@/components/side-link-element'
 import SideEmailElement from '@/components/side-email.element'
 import { Navbar } from '@/components/navigation/navbar'
+import Head from 'next/head'
+import FavIcons from '@/components/fav-icons'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -31,6 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <FavIcons />
       <body
         suppressHydrationWarning
         className={`${robotoMono.variable} ${rubik.variable}`}>
