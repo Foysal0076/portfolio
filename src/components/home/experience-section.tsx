@@ -63,7 +63,12 @@ const ExperienceSection = () => {
 
   return (
     <Section id='experience' className='max-w-[43.75rem] py-16 md:py-28'>
-      <h2 className='numbered-heading'>Where I&rsquo;ve Worked</h2>
+      <h2 className='numbered-heading'>
+        <span className='xl:2xl mr-2.5 font-mono text-base text-primary md:text-xl'>
+          02.
+        </span>{' '}
+        Where I&rsquo;ve Worked
+      </h2>
 
       <div className='md:flex'>
         <div className='relative max-md:max-w-fit md:mr-5 md:max-h-fit md:w-40'>

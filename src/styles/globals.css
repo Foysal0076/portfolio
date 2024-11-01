@@ -137,12 +137,12 @@
 .numbered-heading {
   @apply relative mx-0 mb-10 mt-2.5 flex w-full items-center whitespace-nowrap text-numbered-heading;
 
-  &:before {
+  /* &:before {
     counter-increment: section 1;
     content: '0' counter(section) '.';
     font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
     @apply mr-2.5 font-mono text-primary;
-  }
+  } */
 
   &:after {
     content: '';

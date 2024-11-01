@@ -6,7 +6,7 @@ export const experienceData: Experience[] = [
     position: 'Software Engineer',
     duration: 'June 2021 - Present',
     keyPoints: [
-      'Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more',
+      'Deliver high-quality, robust production code for a diverse array of projects for clients including Apex Learning, One Education Business, and more',
       'Collaborate with a team of 10+ engineers to develop and maintain scalable, secure, and efficient software solutions',
       'Implement best practices for code quality, performance, and security',
       'Participate in code reviews and provide constructive feedback to peers',

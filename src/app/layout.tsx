@@ -8,6 +8,7 @@ import SideEmailElement from '@/components/side-email.element'
 import { Navbar } from '@/components/navigation/navbar'
 import Head from 'next/head'
 import FavIcons from '@/components/fav-icons'
+import { metaObject } from '@/config/site.config'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -21,10 +22,7 @@ const robotoMono = Roboto_Mono({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
-  title: "Foy's Portfolio",
-  description: 'I build things in React & Next.js',
-}
+export const metadata: Metadata = metaObject()
 
 export default function RootLayout({
   children,

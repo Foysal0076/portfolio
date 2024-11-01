@@ -7,17 +7,19 @@ type Props = {
 
 const ProjectCard = ({ project }: Props) => {
   return (
-    <div className='project-card shadow-default hover:shadow-card-hover flex h-full w-full flex-col justify-between rounded bg-card px-7 py-8 transition-[var(--transition)] duration-[400ms] hover:-translate-y-2'>
+    <div className='project-card flex h-full w-full flex-col justify-between rounded bg-card px-7 py-8 shadow-default transition-[var(--transition)] duration-[400ms] hover:-translate-y-2 hover:shadow-card-hover'>
       <header>
         <div className='mb-8 flex items-center justify-between'>
           <FolderIcon className='h-10 w-10 text-primary' strokeWidth='16' />
-          <a
-            href={project.liveUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='hover:text-primary'>
-            <ExternalLinkIcon className='h-5 w-5' strokeWidth='16' />
-          </a>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='hover:text-primary'>
+              <ExternalLinkIcon className='h-5 w-5' strokeWidth='16' />
+            </a>
+          )}
         </div>
         <h3 className='mb-2.5 text-lg text-muted-foreground md:text-[1.375rem]'>
           {project.title}

@@ -5,46 +5,55 @@ const AboutMeSection = () => {
   return (
     <Section id='about' className='max-w-[60rem] py-16 md:py-28'>
       <h2 className='numbered-heading mb-10 text-nowrap text-numbered-heading text-muted-foreground'>
+        <span className='xl:2xl mr-2.5 font-mono text-base text-primary md:text-xl'>
+          01.
+        </span>{' '}
         About Me
       </h2>
       <div className='flex flex-col gap-12 md:flex-row'>
         <div className='basis-3/5'>
           <p className='mb-4'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-            incidunt nostrum odio, quod quaerat vel sequi consequuntur iure, id,
-            est vero voluptatem dolores nobis illum beatae hic. Praesentium rem
-            ratione velit quia consequatur unde tempora perspiciatis earum est
-            in recusandae, magni sed eos impedit quibusdam blanditiis! Alias
-            debitis nulla asperiores!
+            Hello! I&apos;m Foysal, a results-driven software developer with a
+            passion for creating things that live on the internet. My journey in
+            web development has led me to specialize in React.js and Next.js,
+            where I focus on building accessible, inclusive products and digital
+            experiences.
           </p>
           <p className='mb-4'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-            assumenda ab atque officia illo reiciendis sit. Distinctio itaque
-            voluptatum praesentium aliquid accusamus earum, asperiores
-            voluptatibus laborum quo. Fugiat vero animi accusamus deserunt unde,
-            perspiciatis molestiae inventore expedita cum, fuga enim placeat
-            minus veniam!
+            Currently, I&apos;m working at Staff Asia Limited as a React
+            Frontend Developer, where I&apos;ve had the opportunity to develop
+            and maintain various e-commerce and e-learning websites. My
+            experience includes implementing robust authentication systems,
+            integrating payment gateways, and ensuring efficient state
+            management for optimal user experiences.
           </p>
           <p className='mb-4'>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit,
-            earum expedita temporibus officiis ut dolore aspernatur quia
-            laboriosam repudiandae consectetur esse quasi aliquam totam!
+            I&apos;m particularly passionate about writing clean, maintainable
+            code and following industry-standard practices. Working in
+            cross-functional teams has taught me the value of collaboration and
+            agile methodologies in delivering successful projects.
           </p>
           <p className='mb-4'>
-            Here are a few technologies I’ve been working with recently:
+            Here are a few technologies I&apos;ve been working with recently:
           </p>
           <ul className='mt-5 grid grid-cols-[repeat(2,_minmax(8.75rem,_12.5rem))] gap-4'>
-            <li className='@apply .5 relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
-              Javascript
+            <li className='relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
+              TypeScript
             </li>
-            <li className='@apply .5 relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
-              Typescript
+            <li className='relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
+              React.js
             </li>
-            <li className='@apply .5 relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
+            <li className='relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
               Next.js
             </li>
-            <li className='@apply .5 relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
+            <li className='relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
               Node.js
+            </li>
+            <li className='relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
+              Redux/RTK
+            </li>
+            <li className='relative pl-5 font-mono text-[0.8125rem] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-sm before:leading-[12px] before:text-primary before:content-["▹"]'>
+              Tailwind CSS
             </li>
           </ul>
         </div>
