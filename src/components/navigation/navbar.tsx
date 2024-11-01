@@ -9,18 +9,13 @@ import MyLogo from '@/components/my-logo'
 import NavLinks from '@/components/navigation/nav-links'
 import NavigationDrawer from '@/components/navigation/navigation-drawer/navigation-drawer'
 import { useDrawerStore } from '@/store/use-drawer-store'
-import { useOutsideClick } from '@/hooks/use-outside-click'
 
 export const Navbar = () => {
   const [visible, setVisible] = useState(true)
   let lastScrollTop = 0
+  const isDrawerOpen = useDrawerStore((state) => state.isOpen)
 
   const drawerRef = useRef<HTMLDivElement>(null)
-  const toggleMenu = useDrawerStore((state) => state.toggleMenu)
-
-  useOutsideClick(drawerRef, () => {
-    toggleMenu()
-  })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,9 +59,14 @@ export const Navbar = () => {
       </header>
       <div className='md:hidden' ref={drawerRef}>
         <div
-          className={`fixed right-4 ${
-            visible ? 'top-6' : 'top-[-3.75rem] md:top-[-4.25rem]'
-          } z-[1000] transition-[var(--transition)] duration-[350ms]`}>
+          className={cn(
+            'fixed right-4 z-[1000] transition-[var(--transition)] duration-[350ms]',
+            {
+              'top-6': isDrawerOpen || visible,
+              'top-[-3.75rem]': !isDrawerOpen && !visible,
+              'md:top-[-4.25rem]': !isDrawerOpen && !visible,
+            }
+          )}>
           <NavigationDrawerMenu />
         </div>
         <NavigationDrawer />

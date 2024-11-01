@@ -14,19 +14,6 @@ const ExperienceSection = () => {
 
   const dataLength = useMemo(() => experienceData.length, [experienceData])
 
-  useEffect(() => {
-    if (tabsRef.current) {
-      const activeTab = tabsRef.current.children[activeTabIndex] as HTMLElement
-      if (activeTab) {
-        activeTab.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center',
-        })
-      }
-    }
-  }, [activeTabIndex])
-
   const [tabStyle, setTabStyle] = useState<React.CSSProperties>({})
 
   useEffect(() => {
@@ -59,7 +46,7 @@ const ExperienceSection = () => {
         observer.unobserve(tabsRef.current)
       }
     }
-  }, [dataLength, activeTabIndex])
+  }, [activeTabIndex])
 
   return (
     <Section id='experience' className='max-w-[43.75rem] py-16 md:py-28'>
