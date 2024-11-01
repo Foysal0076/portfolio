@@ -1,8 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-
-import { DrawerContent } from './drawer-content'
 import { HamburgerMenu } from './hamburger-menu'
 import { useDrawerStore } from '@/store/use-drawer-store'
 

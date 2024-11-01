@@ -1,9 +1,7 @@
 'use client'
 
 import { DrawerContent } from '@/components/navigation/navigation-drawer/drawer-content'
-import { useOutsideClick } from '@/hooks/use-outside-click'
 import { useDrawerStore } from '@/store/use-drawer-store'
-import { useRef } from 'react'
 
 const NavigationDrawer = () => {
   const isOpen = useDrawerStore((state) => state.isOpen)

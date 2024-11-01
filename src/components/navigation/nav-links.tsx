@@ -4,7 +4,7 @@ import { HTMLAttributes } from 'react'
 
 type Props = HTMLAttributes<HTMLUListElement>
 
-const NavLinks = ({ children, className, ...props }: Props) => {
+const NavLinks = ({ className, ...props }: Props) => {
   return (
     <ul className={cn('flex items-center gap-4', className)} {...props}>
       <li>

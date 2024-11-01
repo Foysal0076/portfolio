@@ -1,9 +1,6 @@
 import NavLinks from '@/components/navigation/nav-links'
-import Button from '@/components/ui/button'
-import Link from 'next/link'
 
 export const DrawerContent = () => {
-  const year = new Date().getFullYear()
   return (
     <nav
       className='flex h-full flex-col justify-between'

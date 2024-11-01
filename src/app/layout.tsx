@@ -6,7 +6,6 @@ import Footer from '@/components/footer'
 import SideLinksElement from '@/components/side-link-element'
 import SideEmailElement from '@/components/side-email.element'
 import { Navbar } from '@/components/navigation/navbar'
-import Head from 'next/head'
 import FavIcons from '@/components/fav-icons'
 import { metaObject } from '@/config/site.config'
 

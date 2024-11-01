@@ -12,7 +12,7 @@ const FeaturedProjectsSection = () => {
         Some Things I&lsquo;ve built
       </h2>
       <ul className='relative z-10 flex flex-col gap-10 md:gap-14 xl:gap-24'>
-        {featuredProjectsData.map((project, i) => (
+        {featuredProjectsData.map((project) => (
           <FeaturedProjectCard key={project.title} project={project} />
         ))}
       </ul>
