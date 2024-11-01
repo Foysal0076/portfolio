@@ -8,6 +8,7 @@ import SideEmailElement from '@/components/side-email.element'
 import { Navbar } from '@/components/navigation/navbar'
 import FavIcons from '@/components/fav-icons'
 import { metaObject } from '@/config/site.config'
+import { Analytics } from '@vercel/analytics/next'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         suppressHydrationWarning
         className={`${robotoMono.variable} ${rubik.variable}`}>
+        <Analytics />
         <Navbar />
         <SideLinksElement />
         <SideEmailElement />
