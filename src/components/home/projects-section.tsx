@@ -2,14 +2,8 @@
 import ProjectCard from '@/components/cards/project-card'
 import Section from '@/components/containers/section'
 import { projectsData } from '@/data/projects.data'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
-import {
-  staggerContainer,
-  fadeInUp,
-  fadeInDown,
-  projectsStaggerContainer,
-} from '@/config/animation.config'
+import { fadeInDown, projectsStaggerContainer } from '@/config/animation.config'
 
 const ProjectSection = () => {
   return (

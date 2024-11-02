@@ -1,7 +1,6 @@
 'use client'
 
 import Button from '@/components/ui/button'
-import { useEffect } from 'react'
 
 interface ErrorProps {
   error: Error
@@ -9,11 +8,6 @@ interface ErrorProps {
 }
 
 const Error = ({ error, reset }: ErrorProps) => {
-  useEffect(() => {
-    // Log the error to an error reporting service
-    console.error('Error:', error)
-  }, [error])
-
   return (
     <div className='flex min-h-screen items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8'>
       <div className='w-full max-w-md space-y-8'>
