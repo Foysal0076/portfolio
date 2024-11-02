@@ -1,56 +1,43 @@
 import Button from '@/components/ui/button'
 import { cn } from '@/utils'
-import { HTMLAttributes } from 'react'
+import { motion, HTMLMotionProps } from 'framer-motion'
+import { staggerContainer, staggerItem } from '@/config/animation.config'
 
-type Props = HTMLAttributes<HTMLUListElement> & {
+type Props = HTMLMotionProps<'ul'> & {
   handleCloseDrawer?: () => void
 }
 
 const NavLinks = ({ className, handleCloseDrawer, ...props }: Props) => {
+  const navItems = [
+    { href: '#about', number: '01', text: 'About' },
+    { href: '#experience', number: '02', text: 'Experience' },
+    { href: '#featured-projects', number: '03', text: 'Work' },
+    { href: '#contact', number: '04', text: 'Contact' },
+  ]
+
   return (
-    <ul className={cn('flex items-center gap-4', className)} {...props}>
-      <li>
-        <a
-          href='#about'
-          onClick={handleCloseDrawer}
-          className='p-2.5 font-mono text-sm transition-colors duration-300 hover:text-primary max-md:flex max-md:flex-col max-md:items-center max-md:gap-1'>
-          {' '}
-          <span className='font-mono text-primary'>01.</span> About
-        </a>
-      </li>
-      <li>
-        <a
-          href='#experience'
-          onClick={handleCloseDrawer}
-          className='p-2.5 font-mono text-sm transition-colors duration-300 hover:text-primary max-md:flex max-md:flex-col max-md:items-center max-md:gap-1'>
-          {' '}
-          <span className='font-mono text-primary'>02.</span> Experience
-        </a>
-      </li>
-      <li>
-        <a
-          href='#featured-projects'
-          onClick={handleCloseDrawer}
-          className='p-2.5 font-mono text-sm transition-colors duration-300 hover:text-primary max-md:flex max-md:flex-col max-md:items-center max-md:gap-1'>
-          {' '}
-          <span className='font-mono text-primary'>03.</span> Work
-        </a>
-      </li>
-      <li>
-        <a
-          href='#contact'
-          onClick={handleCloseDrawer}
-          className='p-2.5 font-mono text-sm transition-colors duration-300 hover:text-primary max-md:flex max-md:flex-col max-md:items-center max-md:gap-1'>
-          {' '}
-          <span className='font-mono text-primary'>04.</span> Contact
-        </a>
-      </li>
-      <li>
+    <motion.ul
+      className={cn('flex items-center gap-4', className)}
+      {...props}
+      variants={staggerContainer}
+      initial='initial'
+      animate='animate'>
+      {navItems.map(({ href, number, text }) => (
+        <motion.li key={href} variants={staggerItem}>
+          <a
+            href={href}
+            onClick={handleCloseDrawer}
+            className='p-2.5 font-mono text-sm transition-colors duration-300 hover:text-primary max-md:flex max-md:flex-col max-md:items-center max-md:gap-1'>
+            <span className='font-mono text-primary'>{number}.</span> {text}
+          </a>
+        </motion.li>
+      ))}
+      <motion.li variants={staggerItem}>
         <a href='/documents/Resume_Foysal_Ahmed.pdf' download>
           <Button className='px-6 py-2.5'>Resume</Button>
         </a>
-      </li>
-    </ul>
+      </motion.li>
+    </motion.ul>
   )
 }
 

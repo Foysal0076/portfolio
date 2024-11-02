@@ -1,5 +1,8 @@
+'use client'
 import { ExternalLinkIcon, GithubIcon } from '@/components/icons'
+import { sectionAnimation } from '@/config/animation.config'
 import { Project } from '@/types'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 type Props = {
@@ -8,7 +11,13 @@ type Props = {
 
 const FeaturedProjectCard = ({ project }: Props) => {
   return (
-    <li className='featured-project-card'>
+    <motion.li
+      variants={sectionAnimation}
+      initial='initial'
+      whileInView='whileInView'
+      transition={sectionAnimation.transition}
+      viewport={sectionAnimation.viewport}
+      className='featured-project-card'>
       <div className='project-content z-10'>
         <div>
           <p className='mb-1 font-mono text-sm text-primary'>
@@ -66,7 +75,7 @@ const FeaturedProjectCard = ({ project }: Props) => {
           />
         </a>
       </div>
-    </li>
+    </motion.li>
   )
 }
 

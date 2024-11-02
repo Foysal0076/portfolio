@@ -9,6 +9,7 @@ import MyLogo from '@/components/my-logo'
 import NavLinks from '@/components/navigation/nav-links'
 import NavigationDrawer from '@/components/navigation/navigation-drawer/navigation-drawer'
 import { useDrawerStore } from '@/store/use-drawer-store'
+import { motion } from 'framer-motion'
 
 export const Navbar = () => {
   const [visible, setVisible] = useState(true)
@@ -49,11 +50,15 @@ export const Navbar = () => {
         <nav
           className='flex w-full items-center justify-between px-4 md:px-8'
           aria-label='Main navigation'>
-          <div className='tracking-tighter'>
+          <motion.div
+            className='tracking-tighter'
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}>
             <Link href='/' className='h5 font-extrabold text-primary'>
               <MyLogo />
             </Link>
-          </div>
+          </motion.div>
           <NavLinks className='hidden md:flex' />
         </nav>
       </header>
