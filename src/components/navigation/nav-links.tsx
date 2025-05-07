@@ -2,6 +2,7 @@ import Button from '@/components/ui/button'
 import { cn } from '@/utils'
 import { motion, HTMLMotionProps } from 'framer-motion'
 import { staggerContainer, staggerItem } from '@/config/animation.config'
+import { myInformation } from '@/data/personal.data'
 
 type Props = HTMLMotionProps<'ul'> & {
   handleCloseDrawer?: () => void
@@ -33,7 +34,7 @@ const NavLinks = ({ className, handleCloseDrawer, ...props }: Props) => {
         </motion.li>
       ))}
       <motion.li variants={staggerItem}>
-        <a href='/documents/Resume_Foysal_Ahmed.pdf' download>
+        <a href={myInformation.resumeUrl} download>
           <Button className='px-6 py-2.5'>Resume</Button>
         </a>
       </motion.li>

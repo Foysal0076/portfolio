@@ -3,6 +3,7 @@ import Section from '@/components/containers/section'
 import Button from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { fadeInDown, staggerContainer } from '@/config/animation.config'
+import { myInformation } from '@/data/personal.data'
 
 const HomeHero = () => {
   return (
@@ -46,7 +47,7 @@ const HomeHero = () => {
         <motion.a
           variants={fadeInDown}
           transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
-          href='/documents/Resume_Foysal_Ahmed.pdf'
+          href={myInformation.resumeUrl}
           download
           className='mt-8 sm:mt-12'>
           <Button>Check out my resume!</Button>

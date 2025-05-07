@@ -2,9 +2,21 @@ import { Experience } from '@/types'
 
 export const experienceData: Experience[] = [
   {
+    company: 'Strativ',
+    position: 'Software Engineer',
+    duration: 'December 2024 - Present',
+    keyPoints: [
+      'Work on multiple projects with minimal guidance, demonstrating strong autonomy and problem-solving skills',
+      'Build complex data-driven dashboards with advanced visualization components (reports, graphs, analytics)',
+      'Design and implement comprehensive data management systems for efficient storage, retrieval, and analysis',
+      'Develop AI-powered chat applications with sophisticated natural language processing capabilities',
+      'Create robust admin panels and management interfaces for streamlined business operations',
+    ],
+  },
+  {
     company: 'Staff Asia',
     position: 'Software Engineer',
-    duration: 'June 2021 - Present',
+    duration: 'June 2021 - July 2024',
     keyPoints: [
       'Deliver high-quality, robust production code for a diverse array of projects for clients including Apex Learning, One Education Business, and more',
       'Collaborate with a team of 10+ engineers to develop and maintain scalable, secure, and efficient software solutions',
